@@ -1,16 +1,16 @@
 pkgname=guvcview
-pkgver=1.7.3
+pkgver=2.0.1
 pkgrel=1
 pkgdesc="A video viewer and capturer for the linux uvc driver"
 arch=('x86_64')
 url="http://guvcview.sourceforge.net/"
 license=('GPL')
-depends=('portaudio-svn' 'ffmpeg' 'gtk3')
+depends=('portaudio-svn' 'ffmpeg' 'gtk3' 'sdl2' 'gsl')
 makedepends=('pkg-config' 'intltool')
 optdepends=('pulseaudio: for PulseAudio support')
-options=('!docs')
+options=('!docs' '!buildflags')
 source=("http://downloads.sourceforge.net/project/${pkgname}/source/${pkgname}-src-${pkgver}.tar.gz")
-md5sums=('f9c510ed9908a8d20ca27099aca948a7')
+md5sums=('54e608b8a2c13d96f546197117d758f4')
 
 build() {
   cd "${srcdir}/${pkgname}-src-${pkgver}"
